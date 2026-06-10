@@ -119,7 +119,9 @@ This project also includes:
 # Team Members
 
 * Aryan Lomte
-* Team Contributors
+* Harshvardhan Mulane
+* Pranav Dete
+* Vishal Hadole
 
 ---
 
