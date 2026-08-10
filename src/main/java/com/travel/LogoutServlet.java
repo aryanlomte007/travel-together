@@ -17,7 +17,7 @@ if(session != null){
     session.invalidate();
 }
 
-response.sendRedirect("auth.jsp");
+response.sendRedirect("login.jsp");
 
 }
 }

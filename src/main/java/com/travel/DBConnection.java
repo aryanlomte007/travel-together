@@ -13,10 +13,13 @@ public class DBConnection {
 
             Class.forName("com.mysql.cj.jdbc.Driver");
 
+            String dbUser = System.getenv("DB_USER");
+            String dbPassword = System.getenv("DB_PASSWORD");
+
             con = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/traveltogether",
-                    "root",
-                    "Aryanpl@7781"
+                    dbUser,
+                    dbPassword
             );
 
             System.out.println("Database Connected");

@@ -1,0 +1,573 @@
+/* ==========================================
+                RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================================
+                LOGIN PAGE
+========================================== */
+
+body.login-page{
+
+    width:100%;
+    height:100vh;
+
+    background:url("../images/login_bg.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+                OVERLAY
+========================================== */
+
+.overlay{
+
+    width:100%;
+    height:100vh;
+
+    background:rgba(0,0,0,.10);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    align-items:center;
+
+    padding-top:45px;
+
+}
+
+/* ==========================================
+                HEADER
+========================================== */
+
+.header{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+.app-name{
+
+    font-size:72px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    text-shadow:0 4px 20px rgba(0,0,0,.45);
+
+}
+
+.travel{
+
+    color:#fff;
+
+}
+
+.together{
+
+    background:linear-gradient(
+        90deg,
+        #FFD54F,
+        #FFF4B2,
+        #FFD54F
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+}
+
+/* ==========================================
+                TAGLINE
+========================================== */
+
+.tagline{
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    padding:10px 28px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    color:white;
+
+    font-size:21px;
+
+    font-weight:500;
+
+    letter-spacing:.5px;
+
+    text-shadow:0 2px 8px rgba(0,0,0,.45);
+
+}
+
+/* ==========================================
+                LOGIN CARD
+========================================== */
+
+.login-card{
+
+    width:450px;
+
+    padding:40px;
+
+    background:rgba(255,255,255,.93);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:24px;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.35);
+
+}
+
+.login-card h2{
+
+    font-size:40px;
+
+    color:#222;
+
+    margin-bottom:10px;
+
+}
+
+.desc{
+
+    color:#666;
+
+    font-size:16px;
+
+    margin-bottom:30px;
+
+    line-height:24px;
+
+}
+
+/* ==========================================
+                FORM
+========================================== */
+
+form{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    margin-bottom:18px;
+
+    border:1px solid #d8d8d8;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+input:focus{
+
+    outline:none;
+
+    border-color:#0d6efd;
+
+    box-shadow:0 0 12px rgba(13,110,253,.25);
+
+}
+
+/* ==========================================
+        SHOW / HIDE PASSWORD
+========================================== */
+
+.password-box{
+
+    position:relative;
+
+    width:100%;
+
+    margin-bottom:18px;
+
+}
+
+.password-box input{
+
+    width:100%;
+
+    margin-bottom:0;
+
+    padding:15px 50px 15px 18px;
+
+}
+
+.toggle-password{
+
+    position:absolute;
+
+    top:50%;
+
+    right:15px;
+
+    transform:translateY(-50%);
+
+    color:#666;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+    user-select:none;
+
+}
+
+.toggle-password:hover{
+
+    color:#0d6efd;
+
+}
+
+/* ==========================================
+                BUTTON
+========================================== */
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#0d6efd;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#0056d6;
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+                LINKS
+========================================== */
+
+.links{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    font-size:15px;
+
+    line-height:30px;
+
+}
+
+.links a{
+
+    color:#0d6efd;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.links a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================================
+            REGISTER PAGE
+========================================== */
+
+/* Register Background */
+
+body.register-page{
+
+    width:100%;
+    height:100vh;
+
+    background:url("../images/register_bg.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+            REGISTER CARD
+========================================== */
+
+.register-card{
+
+    width:600px;
+
+    padding:40px;
+
+    background:rgba(255,255,255,.93);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:24px;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.35);
+
+}
+
+.register-card h2{
+
+    font-size:38px;
+
+    color:#222;
+
+    margin-bottom:10px;
+
+}
+
+.register-card .desc{
+
+    color:#666;
+
+    margin-bottom:30px;
+
+    line-height:24px;
+
+}
+
+/* ==========================================
+            REGISTER FORM
+========================================== */
+
+.register-card form{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.register-row{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-bottom:18px;
+
+}
+
+.register-row input{
+
+    flex:1;
+
+    margin-bottom:0;
+
+}
+
+/* Password Boxes */
+
+.register-row .password-box{
+
+    position:relative;
+
+    flex:1;
+
+    margin-bottom:0;
+
+}
+
+.register-row .password-box input{
+
+    width:100%;
+
+    margin-bottom:0;
+
+    padding-right:50px;
+
+}
+
+/* OTP Button */
+
+.send-otp{
+
+    width:100%;
+
+    margin-top:10px;
+
+}
+
+/* Links */
+
+.register-card .links{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    font-size:15px;
+
+}
+
+/* ==========================================
+            OTP PAGE
+========================================== */
+
+.otp-card{
+
+    width:450px;
+
+    padding:40px;
+
+    background:rgba(255,255,255,.93);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:24px;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.35);
+
+}
+
+.otp-card h2{
+
+    font-size:36px;
+
+    color:#222;
+
+    margin-bottom:10px;
+
+}
+
+.otp-card .desc{
+
+    color:#666;
+
+    margin-bottom:30px;
+
+    line-height:24px;
+
+}
+
+/* ==========================================
+            RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+.overlay{
+
+    padding:20px;
+
+}
+
+.app-name{
+
+    font-size:46px;
+
+}
+
+.tagline{
+
+    font-size:16px;
+
+    padding:8px 18px;
+
+}
+
+.login-card,
+.register-card,
+.otp-card{
+
+    width:92%;
+
+    padding:30px;
+
+}
+
+.login-card h2,
+.register-card h2,
+.otp-card h2{
+
+    font-size:32px;
+
+}
+
+.register-row{
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.register-row input{
+
+    width:100%;
+
+}
+
+.register-row .password-box{
+
+    width:100%;
+
+}
+
+}

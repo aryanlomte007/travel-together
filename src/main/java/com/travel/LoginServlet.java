@@ -7,51 +7,75 @@ import java.sql.ResultSet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    private static final long serialVersionUID = 1L;
+
+    @Override
+    protected void doPost(HttpServletRequest request,
+                          HttpServletResponse response)
             throws ServletException, IOException {
 
-        String user = request.getParameter("username");
-        String pass = request.getParameter("password");
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
 
         try {
 
             Connection con = DBConnection.getConnection();
 
-            PreparedStatement ps = con.prepareStatement(
-                    "SELECT * FROM users WHERE username=? AND password=?"
-            );
+            String query = "SELECT * FROM users WHERE username = ? AND password = ?";
 
-            ps.setString(1, user);
-            ps.setString(2, pass);
+            PreparedStatement ps = con.prepareStatement(query);
+
+            ps.setString(1, username);
+            ps.setString(2, password);
 
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
 
                 HttpSession session = request.getSession();
-                session.setAttribute("user", user);
 
-                // Role handling
-                if ("admin".equals(user)) {
-                    session.setAttribute("role", "admin");
-                } else {
-                    session.setAttribute("role", "user");
-                }
+                session.setAttribute("user", username);
+
+                session.setAttribute("userId", rs.getInt("id"));
+
+                session.setAttribute("firstName", rs.getString("first_name"));
+
+                session.setAttribute("lastName", rs.getString("last_name"));
+
+                session.setAttribute("email", rs.getString("email"));
+
+                session.setAttribute("role", rs.getString("role"));
 
                 response.sendRedirect(request.getContextPath() + "/home.jsp");
 
             } else {
-                response.sendRedirect(request.getContextPath() + "/auth.jsp?error=login");
+
+                response.sendRedirect(request.getContextPath()
+                        + "/login.jsp?error=invalid");
+
             }
 
+            rs.close();
+            ps.close();
+            con.close();
+
         } catch (Exception e) {
+
             e.printStackTrace();
-            response.sendRedirect(request.getContextPath() + "/auth.jsp?error=server");
+
+            response.sendRedirect(request.getContextPath()
+                    + "/login.jsp?error=server");
+
         }
+
     }
+
 }
