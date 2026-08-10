@@ -10,25 +10,64 @@ The system is being developed using Java, JSP, Servlets, and MySQL as part of a 
 
 # Objectives
 
-* Simplify trip planning and management
-* Improve collaborative travel coordination
-* Manage itineraries and expenses efficiently
-* Provide an organized and user-friendly travel management system
-* Develop a research-oriented smart travel solution
+- Simplify trip planning and management
+- Improve collaborative travel coordination
+- Manage itineraries and expenses efficiently
+- Provide an organized and user-friendly travel management system
+- Develop a research-oriented smart travel solution
 
 ---
 
-# Features
+# Current Features
 
-* User Registration & Login
-* Secure Authentication System
-* Trip Creation & Management
-* Itinerary Planning
-* Expense Tracking
-* Trip Editing & Updating
-* Collaborative Group Travel Planning
-* Database Connectivity using MySQL
-* Session Management & Logout Functionality
+## Authentication & Account Management
+
+- User Registration
+- User Login
+- User Logout
+- Session Management
+- Email OTP Verification
+- OTP Resend Functionality
+- Forgot Password
+- Forgot Password OTP Verification
+- Password Reset
+
+## Home Page
+
+- User-friendly Home Page
+- Navigation between major travel modules
+- Travel-focused interface and design
+
+## Trip Management
+
+- Trip Creation
+- Trip Editing
+- Trip Updating
+- Trip Management
+
+## Itinerary Management
+
+- Travel Schedule Management
+- Itinerary Planning
+- Organizing trip activities
+
+## Expense Management
+
+- Trip Expense Tracking
+- Expense Management
+- Organizing travel-related expenses
+
+## Collaborative Travel Features
+
+- Group Trip Planning
+- Collaborative Trip Management
+- Shared travel planning features
+
+## Database
+
+- MySQL Database Integration
+- JDBC-based Database Connectivity
+- User Account Management
 
 ---
 
@@ -36,26 +75,27 @@ The system is being developed using Java, JSP, Servlets, and MySQL as part of a 
 
 ## Frontend
 
-* HTML
-* CSS
-* JSP
+- HTML
+- CSS
+- JavaScript
+- JSP
 
 ## Backend
 
-* Java
-* Servlets
-* JDBC
+- Java
+- Servlets
+- JDBC
 
 ## Database
 
-* MySQL
+- MySQL
 
 ## Tools & Platforms
 
-* Eclipse IDE
-* Apache Tomcat
-* Git
-* GitHub
+- Eclipse IDE
+- Apache Tomcat
+- Git
+- GitHub
 
 ---
 
@@ -63,69 +103,40 @@ The system is being developed using Java, JSP, Servlets, and MySQL as part of a 
 
 ## Authentication Module
 
-Handles user registration, login, and session management.
+Handles user registration, login, logout, session management, email OTP verification, and account recovery.
+
+## Home Page Module
+
+Provides the main interface of the application and allows users to navigate through the major Travel Together features.
 
 ## Trip Management Module
 
-Allows users to create, edit, update, and delete trips.
+Allows users to create, edit, update, and manage trips.
 
 ## Itinerary Management Module
 
-Helps users organize travel schedules and trip plans.
+Helps users organize travel schedules, activities, and trip plans.
 
 ## Expense Management Module
 
-Tracks and manages trip-related expenses.
+Allows users to track and manage trip-related expenses.
+
+## Collaborative Travel Module
+
+Supports group-based trip planning and collaborative travel management.
 
 ## Database Connectivity Module
 
-Maintains communication between application and MySQL database.
+Maintains communication between the application and MySQL database using JDBC.
 
 ---
 
-# Future Enhancements
+# Security
 
-* AI-based travel recommendations
-* Smart expense splitting
-* Real-time collaboration features
-* Live group chat
-* Cloud deployment
-* Responsive UI improvements
+Database credentials are not stored directly in the source code.
 
----
+The application retrieves database credentials using environment variables:
 
-# Research & Academic Work
-
-This project also includes:
-
-* Survey and analysis of existing travel applications
-* Comparative study of current systems
-* Literature review based on IEEE research papers
-* Research paper preparation for conference/journal submission
-
----
-
-# Learning Outcomes
-
-* Java Web Development
-* Backend Development
-* Database Management
-* Git & GitHub Workflow
-* Team Collaboration
-* Research Methodology
-
----
-
-# Team Members
-
-* Aryan Lomte
-* Harshvardhan Mulane
-* Pranav Dete
-* Vishal Hadole
-
----
-
-
-# Project Status
-
-Currently under active development and research phase.
+```text
+DB_USER
+DB_PASSWORD
